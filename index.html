@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="public/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sushmin.vercel.app/">
+    <meta property="og:title" content="Sushmin | Portfolio">
+    <meta property="og:image" content="https://sushmin.vercel.app/icon.png">
     <title>Sushmin</title>
     <style>
         :root {
@@ -29,16 +34,6 @@
             overflow: hidden;
             margin-bottom: 50px;
         }
-
-        .header-image {
-            height: 100%;
-            width: auto;
-            max-width: 300px;
-            object-fit: cover;
-            filter: grayscale(100%);
-            display: block;
-        }
-
 
         .container {
             display: flex;
@@ -174,14 +169,14 @@
         .nav-list {
             display: flex;
             flex-direction: column;
-            align-items: flex-end; /* Keeps text right-aligned to the border */
+            align-items: flex-end;
             gap: 12px;
         }
 
         .garden-link-wrapper {
             margin-top: 20px;
             padding-top: 20px;
-            border-top: 1px solid #eee; /* Subtle separator */
+            border-top: 1px solid #eee;
             width: 100%;
             text-align: right;
         }
@@ -196,7 +191,7 @@
             display: flex;
             gap: 15px;
             margin-top: 10px;
-            justify-content: flex-end; /* Aligns icons with the text above */
+            justify-content: flex-end;
         }
 
         .social-icon-link svg {
@@ -219,10 +214,61 @@
             letter-spacing: 1px;
         }
 
+        .identity-mobile, .mobile-footer { display: none; }
+
         @media (max-width: 768px) {
-            .container { flex-direction: column; gap: 30px; }
-            aside.sidebar { text-align: left; width: 100%; border-bottom: 1px solid #ccc; padding-bottom: 20px; }
-            header.ubu-banner { height: 150px; }
+            header.ubu-banner {
+                display: none;
+            }
+
+            .identity-desktop, .desktop-socials, .system-id {
+                display: none;
+            }
+
+            .identity-mobile {
+                display: block;
+                margin: 40px 0 20px 0;
+            }
+
+            .container {
+                display: block;
+                padding: 0 20px;
+            }
+
+            aside.sidebar {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 25px;
+            }
+
+            .nav-list {
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .garden-link-wrapper {
+                text-align: left;
+                border-top: 1px solid #eee;
+                margin-top: 8px;
+                padding-top: 8px;
+                width: 100%;
+            }
+
+            .mobile-footer {
+                display: block;
+                text-align: center;
+                padding: 40px 0;
+                border-top: 1px solid #eee;
+                margin-top: 40px;
+            }
+
+            .mobile-footer .social-icons-row {
+                justify-content: center;
+                display: flex;
+                gap: 25px;
+            }
         }
     </style>
 </head>
@@ -234,23 +280,28 @@
 
 <div class="container">
 
+    <div class="identity-mobile">
+        <h1>Sushminthiran S.</h1>
+        <span class="founded-text">Ist. 2026 | Chennai, IN</span>
+    </div>
+
     <aside class="sidebar">
         <nav class="nav-list">
-            <a href="public/resume.pdf">RESUME</a>
-            <a href="mailto:sushimeenthiran14@gmail.com">EMAIL</a>
+            <a href="public/resume.pdf" class="action-link" target="_blank" rel="noopener noreferrer">RESUME</a>
+            <a href="mailto:sushimeenthiran14@gmail.com" class="action-link">EMAIL</a>
 
             <div class="garden-link-wrapper">
-                <a href="https://personal.sushminthiran.dev" class="garden-link">
+                <a href="https://personal.sushminthiran.dev" class="garden-link" target="_blank" rel="noopener noreferrer">
                     &rarr; DIGITAL GARDEN
                 </a>
             </div>
 
-            <div class="social-icons-row">
-                <a href="https://github.com/Unknown2151" class="social-icon-link" aria-label="GitHub">
+            <div class="social-icons-row desktop-socials">
+                <a href="https://github.com/Unknown2151" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" >
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405 1.02 0 2.04.135 3 .405 2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
 
-                <a href="https://www.linkedin.com/in/sushminthiran/" class="social-icon-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/sushminthiran/" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
             </div>
@@ -262,8 +313,10 @@
     </aside>
 
     <main class="content">
-        <h1>Sushminthiran S.</h1>
-        <span class="founded-text">Ist. 2026 | Chennai, IN</span>
+        <div class="identity-desktop">
+            <h1>Sushminthiran S.</h1>
+            <span class="founded-text">Ist. 2026 | Chennai, IN</span>
+        </div>
 
         <p style="margin-bottom: 50px; max-width: 600px;">
             I am a dedicated problem-solver with advanced proficiency in Python and a strong foundation in Data Structures and Algorithms (DSA). My expertise lies in developing efficient code solutions and exploring the intersection of Machine Learning and web technologies. With a solid grasp of frontend development and a growing interest in scalable architectures, I am passionate about building intelligent applications that solve real-world challenges.
@@ -272,31 +325,43 @@
         <ul class="project-list" id="projects">
 
             <li class="project-item">
-                <a href="https://github.com/Unknown2151/ids#" class="project-title">Intrusion Detection System</a>
+                <a href="https://github.com/Unknown2151/ids#" class="project-title" target="_blank" rel="noopener noreferrer">Intrusion Detection System</a>
                 <span class="project-desc">Explainable Deep Learning Framework using SHAP values for network security. Achieved 92% accuracy on KDD Cup.</span>
                 <span class="stack">[Python, Streamlit, Scapy, TensorFlow / Keras, SHAP]</span>
             </li>
 
             <li class="project-item">
-                <a href="https://github.com/Unknown2151/git-explorer.git" class="project-title">Visual Git Explorer</a>
+                <a href="https://github.com/Unknown2151/git-explorer.git" class="project-title" target="_blank" rel="noopener noreferrer">Visual Git Explorer</a>
                 <span class="project-desc">High-performance Git GUI using Electron and worker threads for large repo visualization.</span>
                 <span class="stack">[Electron (Node.js + Chromium), Vanilla JS, Isomorphic-Git, Native Git Spawn, Worker Threads]</span>
             </li>
 
             <li class="project-item">
-                <a href="https://github.com/Unknown2151/flight-delay-prediction.git" class="project-title">Flight Delay Predictor</a>
+                <a href="https://github.com/Unknown2151/flight-delay-prediction.git" class="project-title" target="_blank" rel="noopener noreferrer">Flight Delay Predictor</a>
                 <span class="project-desc">End-to-end ML pipeline with FastAPI and LightGBM to predict airline delays.</span>
                 <span class="stack">[FastAPI, LightGBM, Redis, Docker]</span>
             </li>
 
             <li class="project-item">
-                <a href="https://github.com/Unknown2151/found-extension.git" class="project-title">Found-Extension</a>
+                <a href="https://github.com/Unknown2151/found-extension.git" class="project-title" target="_blank" rel="noopener noreferrer">Found-Extension</a>
                 <span class="project-desc">Local-first knowledge graph Chrome extension using Cytoscape.js.</span>
                 <span class="stack">[Svelte + Vite, Cytoscape.js, Tailwind CSS]</span>
             </li>
 
         </ul>
     </main>
+
+    <footer class="mobile-footer">
+        <div class="social-icons-row footer-socials">
+            <a href="https://github.com/Unknown2151" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405 1.02 0 2.04.135 3 .405 2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/sushminthiran/" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+        </div>
+    </footer>
 </div>
 
 </body>
