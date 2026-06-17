@@ -17,6 +17,7 @@
 <aside class="sidebar">
     <nav class="nav-list">
         <a href="index.html" class="nav-item">HOME</a>
+        <a href="projects.html" class="nav-item">PROJECTS</a>
         <a href="public/resume.pdf" class="action-link" target="_blank" rel="noopener noreferrer">RESUME</a>
         <a href="mailto:sushimeenthiran14@gmail.com" class="action-link">EMAIL</a>
 
@@ -48,16 +49,19 @@
     <ul class="project-list" id="projects">
 
         <li class="project-item">
-            <a href="https://github.com/Unknown2151/ids#" class="project-title" target="_blank" rel="noopener noreferrer">Intrusion Detection System</a>
-            <span class="project-desc">Developed a network security monitor that translates complex neural network decisions into human-readable insights using SHAP values. Captured and processed live network packets to identify potential threats with high precision.</span>
-            <span class="stack">[Python, Streamlit, Scapy, TensorFlow / Keras, SHAP]</span>
+            <a href="project.html?id=job-agent" class="project-title"  rel="noopener noreferrer">AI Job Search & Research Agent</a>
+            <span class="project-desc">A production-grade agentic system using LangChain v1.x and Gemini 1.5 Flash. It features parallel scraping (LinkedIn/Naukri), voice-to-query via AssemblyAI, and automated skill-gap analysis against uploaded resumes.</span>
+            <span class="stack">[Google Gemini 1.5 Flash, LangGraph, SQLite (via SqliteSaver), Selenium (Headless Chrome), Streamlit, Docker]</span>
         </li>
 
+
         <li class="project-item">
-            <a href="https://github.com/Unknown2151/flight-delay-prediction.git" class="project-title" target="_blank" rel="noopener noreferrer">Flight Delay Predictor</a>
+            <a href="project.html?id=flight-predictor" class="project-title"  rel="noopener noreferrer">Flight Delay Predictor</a>
             <span class="project-desc">Engineered an end-to-end prediction service utilizing a FastAPI backend to serve low-latency machine learning inferences. Integrated Redis for result caching to minimize redundant computations and improve response times under load.</span>
             <span class="stack">[FastAPI, LightGBM, Redis, Docker]</span>
         </li>
+
+
 
     </ul>
 </main>
